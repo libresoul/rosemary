@@ -28,6 +28,7 @@ include_once 'includes/header.inc.php'
             </div>
             <div class="flex justify-center items-center">
                 <button
+                    name="submit"
                     type="submit"
                     class="bg-pink-600 text-white py-3 px-6 rounded-md cursor-pointer transition-colors duration-300 hover:bg-pink-500">
                     Login
