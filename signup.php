@@ -5,10 +5,7 @@ include_once 'includes/header.inc.php'
 
 <div style="background-image: url(images/static/colorful-ice-cream.webp); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;" class="h-[--dont-overflow] flex items-center justify-center bg-red-200 rounded-lg">
     <div class="main bg-pink-100 shadow-md p-10 transition-transform w-96 text-center rounded-lg">
-        <h1 class="text-pink-600 text-3xl">Start </h1>
-        <h1 class="text-pink-600 text-3xl">Your Delicious</h1>
-        <h1 class="text-pink-600 text-3xl">Adventure </h1>
-        <h1 class="text-pink-600 text-3xl">Here!</h1>
+        <h1 class="text-pink-600 text-3xl">Start<br>Your Delicious<br>Adventure<br>Here!</h1>
         <form action="data.php" method="POST">
             <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
             <input
