@@ -7,24 +7,26 @@ include_once 'includes/header.inc.php'
     <div class="main bg-pink-100 shadow-md p-10 transition-transform w-96 text-center rounded-lg">
         <h1 class="text-pink-600 text-3xl">Start<br>Your Delicious<br>Adventure<br>Here!</h1>
         <form action="data.php" method="POST">
-            <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
-            <input
-                type="text"
-                id="first"
-                name="username"
-                placeholder="Enter your Username"
-                class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
-                required>
-
-            <label for="password" class="block mb-2 text-left text-gray-700 font-bold">Password</label>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your Password"
-                class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
-                required>
-
+            <div>
+                <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
+                <input
+                    type="text"
+                    id="first"
+                    name="username"
+                    placeholder="Enter your Username"
+                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    required>
+            </div>
+            <div>
+                <label for="password" class="block mb-2 text-left text-gray-700 font-bold">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your Password"
+                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    required>
+            </div>
             <div class="flex justify-center items-center">
                 <button
                     type="submit"
