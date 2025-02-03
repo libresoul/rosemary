@@ -18,6 +18,16 @@ include_once 'includes/header.inc.php'
                     required>
             </div>
             <div>
+                <label for="email" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your Email"
+                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    required>
+            </div>
+            <div>
                 <label for="password" class="block mb-2 text-left text-gray-700 font-bold">Password</label>
                 <input
                     type="password"
