@@ -7,7 +7,7 @@ include_once 'includes/header.inc.php'
     <div class="main bg-pink-100 shadow-md p-10 transition-transform w-96 text-center rounded-lg">
         <h1 class="text-pink-600 text-3xl">Start<br>Your Delicious<br>Adventure<br>Here!</h1>
         <form action="data.php" method="POST">
-            <div>
+            <div class="relative mb-6">
                 <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
                 <input
                     type="text"
@@ -16,6 +16,7 @@ include_once 'includes/header.inc.php'
                     placeholder="Enter your Username"
                     class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
                     required>
+                <button type="button" id="genbtn" class="absolute right-4 top-10 bottom-0 px-2 h-fit text-gray-400 rounded-md hover:opacity-50"><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
             <div>
                 <label for="email" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Email</label>
@@ -50,6 +51,19 @@ include_once 'includes/header.inc.php'
         </div>
 
     </div>
+    <script>
+        const genbutton = document.getElementById('genbtn');
+        const unamefield = document.getElementById('uname')
+        genbutton.addEventListener('click', async () => {
+            genbutton.classList.add('text-pink-700');
+            const data = await fetch('https://usernameapiv1.vercel.app/api/random-usernames');
+            (!data.ok) ?? genbutton.classList.add('text-red-700');
+            const data_fmt = await data.json();
+            const username = data_fmt.usernames[0];
+            unamefield.value = `${username}`;
+            genbutton.classList.remove('text-pink-700');
+        })
+    </script>
     </body>
 
     </html>
