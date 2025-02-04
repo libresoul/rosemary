@@ -161,3 +161,28 @@ function handleSignErrors()
         DETAILS;
     }
 }
+
+function addOrder($name, $address, $contact_no, $id)
+{
+    include_once 'db.inc.php';
+
+    $sql = "INSERT INTO orders(name, address, contact_no, CakeID) VALUES(:name, :address, :contact_no, :id)";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':name', $name, SQLITE3_TEXT);
+    $stmt->bindValue(':address', $address, SQLITE3_TEXT);
+    $stmt->bindValue(':contact_no', $contact_no, SQLITE3_TEXT);
+    $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+
+    if (!$stmt) {
+        header('Location:../signin.php?error=stmtfailed');
+        exit();
+    }
+
+    $result = $stmt->execute();
+
+    if (!$result) {
+        return false;
+    } else {
+        return true;
+    }
+}
