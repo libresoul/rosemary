@@ -4,7 +4,7 @@ include_once 'includes/header.inc.php';
 include_once 'includes/functions.inc.php';
 ?>
 
-<div class="h-[--dont-overflow] flex items-center justify-center bg-pink-200 rounded">
+<div class="h-[--dont-overflow] flex items-center justify-center rounded">
     <div class="p-10 transition-transform w-xl text-center rounded">
         <h1 class="text-pink-600 text-5xl font-bold">Start Your<br>Delicious<br>Adventure Here!</h1>
         <form action="signup_handler.php" method="POST" class="m-10">
