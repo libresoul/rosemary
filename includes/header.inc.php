@@ -49,7 +49,7 @@ session_start();
     </script>
 </head>
 
-<body class="bg-pink-200 font-['Comfortaa']">
+<body class="font-['Comfortaa'] bg-[url(images/static/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg)]">
     <!-- <nav
         class="sticky h-12  top-0 my-4 text-lg text-pink-600 flex content-center justify-between gap-6 bg-white border-pink-100 shadow-lg py-3 rounded-lg">
         <div class="xl:ml-64 lg:ml-32 md:ml-20">
@@ -62,7 +62,7 @@ session_start();
             <a href="signin.php" class="hover:bg-pink-200 px-4 py-2 rounded transition">Sign In</a>
         </div>
     </nav> -->
-    <nav class="sticky h-20 bg-pink-700 rounded-lg w-full z-40 text-pink-50">
+    <nav class="sticky h-20 bg-pink-700 w-full z-40 text-pink-50">
         <div class="max-w-screen-xl items-center justify-center flex gap-10 p-4 rounded min-w-full">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="images/static/logo.PNG" class="h-12" alt="Logo">
