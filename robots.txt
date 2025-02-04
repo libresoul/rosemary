@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /images/
+Disallow: /data/
+Disallow: /includes/
+Disallow: /payment_handler.php
+Disallow: /signup_handler.php
+Disallow: /signin_handler.php
