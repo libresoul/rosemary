@@ -4,13 +4,13 @@ include_once 'includes/header.inc.php';
 include_once 'includes/functions.inc.php';
 ?>
 
-<div style="background-image: url(images/static/colorful-ice-cream.webp); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;" class="h-[--dont-overflow] flex items-center justify-center bg-red-200 rounded-lg">
-    <div class="main bg-pink-100 shadow-md p-10 transition-transform w-96 text-center rounded-lg">
-        <h1 class="text-pink-600 text-3xl">Start<br>Your Delicious<br>Adventure<br>Here!</h1>
-        <form action="signup_handler.php" method="POST">
+<div class="h-[--dont-overflow] flex items-center justify-center bg-pink-200 rounded">
+    <div class="p-10 transition-transform w-xl text-center rounded">
+        <h1 class="text-pink-600 text-5xl font-bold">Start Your<br>Delicious<br>Adventure Here!</h1>
+        <form action="signup_handler.php" method="POST" class="m-10">
             <?php handleSignErrors(); ?>
-            <div class="relative mb-6">
-                <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
+            <div class="relative">
+                <label for="username" class="block m-2 text-xl font-medium text-pink-600">Username</label>
                 <input
                     type="text"
                     id="uname"
@@ -18,22 +18,22 @@ include_once 'includes/functions.inc.php';
                     minlength="4"
                     maxlength="20"
                     placeholder="Enter your Username"
-                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
-                <button type="button" id="genbtn" class="absolute right-4 top-10 bottom-0 px-2 h-fit text-gray-400 rounded-md hover:opacity-50"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button type="button" id="genbtn" class="absolute right-0 top-10 bottom-0 h-fit text-gray-400 rounded-md hover:opacity-50"><i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
             <div>
-                <label for="email" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Email</label>
+                <label for="email" class="block m-2 text-xl font-medium text-pink-600">Email</label>
                 <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Enter your Email"
-                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
             </div>
             <div>
-                <label for="password" class="block mb-2 text-left text-gray-700 font-bold">Password</label>
+                <label for="password" class="block m-2 text-xl font-medium text-pink-600">Password</label>
                 <input
                     type="password"
                     id="password"
@@ -41,17 +41,17 @@ include_once 'includes/functions.inc.php';
                     minlength="4"
                     maxlength="15"
                     placeholder="Enter your Password"
-                    class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
+                    class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
             </div>
-            <div class="checkbox mb-3">
+            <div class="m-3">
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAA7WFYd1UNGvHrcb" data-theme="light" data-size="flexible"></div>
             </div>
             <div class="flex justify-center items-center">
                 <button
                     name="submit"
                     type="submit"
-                    class="bg-pink-600 text-white py-3 px-6 rounded-md cursor-pointer transition-colors duration-300 hover:bg-pink-500">
+                    class="bg-pink-600 text-white py-3 px-6 rounded cursor-pointer transition-all duration-500 hover:scale-125">
                     Join
                 </button>
             </div>
