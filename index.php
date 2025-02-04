@@ -22,9 +22,9 @@ include_once 'includes/header.inc.php';
 <!-- Overview of products -->
 <div class="flex justify-center items-center">
     <div class="bg-pink-400/50 rounded max-w-6xl">
-        <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10">Our Specialties</h3>
-        <div class="flex justify-center gap-10 p-10">
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
+        <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10 m-10">Our Specialties</h3>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10">
+            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
                 <a href="shopping.php#Cupcake">
                     <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                         <img src="images/static/Cupcakes.jpg" alt="Cupcake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
@@ -37,7 +37,7 @@ include_once 'includes/header.inc.php';
                     Fluffy and delicious, baked with love.
                 </div>
             </div>
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
+            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
                 <a href="shopping.php#Cake">
                     <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                         <img src="images/static/Cake.webp" alt="Cake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
@@ -50,7 +50,7 @@ include_once 'includes/header.inc.php';
                     Perfect for celebrations, fresh and moist.
                 </div>
             </div>
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
+            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
                 <a href="shopping.php#Donut">
                     <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                         <img src="images/static/donut.webp" alt="Donut" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
