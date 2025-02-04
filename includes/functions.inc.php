@@ -53,3 +53,30 @@ function handlePost($turnstileResp)
 
     return $response['success'];
 }
+
+function isUnique($db, $uname, $email)
+{
+    $sql = "SELECT * FROM users WHERE uname = :uname OR email = :email;";
+
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':uname', $uname, SQLITE3_TEXT);
+    $stmt->bindValue(':email', $email, SQLITE3_TEXT);
+
+    if (!$stmt) {
+        header('Location:../signup.php?error=stmtfailed');
+        exit();
+    }
+
+    $result = $stmt->execute();
+    if ($result) {
+        $row = $result->fetchArray(SQLITE3_ASSOC);
+        if ($row) {
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        header('Location:../signup.php?error=executionfailed');
+        exit();
+    }
+}
