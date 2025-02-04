@@ -45,7 +45,7 @@
 if (basename($_SERVER['REQUEST_URI']) == 'shopping.php') {
 ?>
 
-    <body style="font-family: Comfortaa; background-image: url(images/static/teal-bg.webp); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;" class="bg-pink-50 text-gray-800 mb-2 text-md font-comfortaa mx-4">
+    <body style="background-image: url(images/static/teal-bg.webp); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;" class="bg-pink-50 text-gray-800 mb-2 text-md font-comfortaa mx-4">
     <?php
 } else {
     ?>
