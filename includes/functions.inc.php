@@ -30,3 +30,26 @@ function groupCakes()
     }
     return $groupedCards;
 }
+
+function handlePost($turnstileResp)
+{
+    $data = [
+        "secret" => getenv('TURNSTILE_SECRET'),
+        "response" => $turnstileResp,
+        "remoteip" => $_SERVER['REMOTE_ADDR'],
+    ];
+
+    $options = [
+        "http" => [
+            "header" => "Content-Type: application/x-www-form-urlencoded",
+            "method" => "POST",
+            "content" => http_build_query($data),
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $result = file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $context);
+    $response = json_decode($result, true);
+
+    return $response['success'];
+}

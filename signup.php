@@ -38,6 +38,9 @@ include_once 'includes/header.inc.php'
                     class="bg-pink-100 block w-full mb-6 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-pink-400"
                     required>
             </div>
+            <div class="checkbox mb-3">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA7WFYd1UNGvHrcb" data-theme="light" data-size="flexible"></div>
+            </div>
             <div class="flex justify-center items-center">
                 <button
                     name="submit"
