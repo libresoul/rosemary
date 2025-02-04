@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +92,11 @@ if (basename($_SERVER['REQUEST_URI']) == 'shopping.php') {
                     </ul>
                 </div>
                 <div class="hidden md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="signup.php"><button type="button" class="text-white bg-teal-500 hover:bg-teal-600 hover:scale-125 transition-all duration-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center text-xl">Start Your Journey !</button></a>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <a href="signout.php"><button type="button" class="text-white bg-teal-500 hover:bg-teal-600 hover:scale-125 transition-all duration-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center text-xl"><i class="fa fa-sign-out" aria-hidden="true"></i></button></a>
+                    <?php else: ?>
+                        <a href="signup.php"><button type="button" class="text-white bg-teal-500 hover:bg-teal-600 hover:scale-125 transition-all duration-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center text-xl">Start Your Journey !</button></a>
+                    <?php endif; ?>
                 </div>
 
             </div>
@@ -108,6 +115,8 @@ if (basename($_SERVER['REQUEST_URI']) == 'shopping.php') {
                 <li><a href="about.php" class="block py-2 px-3 text-gray-900 hover:bg-gray-200">About</a></li>
                 <li><a href="contact.php" class="block py-2 px-3 text-gray-900 hover:bg-gray-200">Contact Us</a></li>
             </ul>
-            <a href="signup.php"><button type="button" class="text-white bg-teal-500 hover:bg-teal-600 hover:scale-105 transition-all duration-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg ml-5 px-1 py-2 text-center text-md">Start Your Journey !</button></a>
-
+            <?php if (isset($_SESSION['username'])): ?>
+            <?php else: ?>
+                <a href="signup.php"><button type="button" class="text-white bg-teal-500 hover:bg-teal-600 hover:scale-105 transition-all duration-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg ml-5 px-1 py-2 text-center text-md">Start Your Journey !</button></a>
+            <?php endif ?>
         </div>
