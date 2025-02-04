@@ -10,6 +10,10 @@ session_start();
     <?= (isset($pageTitle)) ? "<title>$pageTitle</title>" : "<title>Rosemary</title>" ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Google Font Raleway -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,26 +96,26 @@ session_start();
     </nav>
 
     <!-- Mobile Side Menu -->
-<div id="mobile-menu" class="fixed z-10 top-0 left-0 h-96 w-full bg-pink-600 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-center items-center">
-    <button id="close-menu" class="absolute top-4 right-4 text-pink-100">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-    </button>
-    <ul class="mt-16 space-y-4 p-6 text-xl font-medium flex flex-col items-center text-pink-100">
-        <li><a href="/" class="block text-xl md:hover:bg-transparent hover:scale-125 transition-all duration-500">Home</a></li>
-        <li><a href="shopping.php" class="block text-xl hover:scale-125 transition-all duration-500">Browse</a></li>
-        <li><a href="about.php" class="block text-xl hover:scale-125 transition-all duration-500">About</a></li>
-        <li><a href="contact.php" class="block text-xl hover:scale-125 transition-all duration-500">Contact</a></li>
-        
-        <?php if (!isset($_SESSION['username'])): ?>
-            <div class="mt-6">
-                <a href="signup.php">
-                    <button type="button" class="text-pink-700 bg-pink-200 hover:scale-125 transition-all duration-500 font-medium rounded-lg text-center text-xl p-2">
-                        Start Your Journey
-                    </button>
-                </a>
-            </div>
-        <?php endif ?>
-    </ul>
-</div>
+    <div id="mobile-menu" class="fixed z-10 top-0 left-0 h-96 w-full bg-pink-600 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-center items-center">
+        <button id="close-menu" class="absolute top-4 right-4 text-pink-100">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <ul class="mt-16 space-y-4 p-6 text-xl font-medium flex flex-col items-center text-pink-100">
+            <li><a href="/" class="block text-xl md:hover:bg-transparent hover:scale-125 transition-all duration-500">Home</a></li>
+            <li><a href="shopping.php" class="block text-xl hover:scale-125 transition-all duration-500">Browse</a></li>
+            <li><a href="about.php" class="block text-xl hover:scale-125 transition-all duration-500">About</a></li>
+            <li><a href="contact.php" class="block text-xl hover:scale-125 transition-all duration-500">Contact</a></li>
+
+            <?php if (!isset($_SESSION['username'])): ?>
+                <div class="mt-6">
+                    <a href="signup.php">
+                        <button type="button" class="text-pink-700 bg-pink-200 hover:scale-125 transition-all duration-500 font-medium rounded-lg text-center text-xl p-2">
+                            Start Your Journey
+                        </button>
+                    </a>
+                </div>
+            <?php endif ?>
+        </ul>
+    </div>
