@@ -65,7 +65,7 @@ session_start();
     <nav class="sticky h-20 bg-pink-600 w-full z-40 text-pink-50">
         <div class="max-w-screen-xl items-center justify-center flex gap-10 p-4 rounded min-w-full">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <!--<img src="images/static/logo.PNG" class="h-12" alt="Logo">-->
+                <img src="images/static/logo.PNG" class="h-12 hover:scale-125 transition-all duration-500" alt="Logo">
                 <span class="text-3xl font-semibold whitespace-nowrap hover:scale-125 transition-all duration-500">Rosemary</span>
             </a>
             <button id="menu-toggle" class="text-pink-200 md:hidden focus:outline-none hover:scale-125 transition-all duration-500">
