@@ -8,7 +8,7 @@ $groupedCards = groupCakes();
 <div id="card-container">
     <?php foreach ($groupedCards as $type => $cards): ?>
         <div class="flex items-center justify-center">
-            <h2 class="w-96 p-6 text-pink-50 bg-pink-600 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
+            <h2 class="w-96 p-6 text-pink-50 bg-pink-600/50 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
                 <?= htmlspecialchars($type) ?>
             </h2>
         </div>
@@ -18,12 +18,12 @@ $groupedCards = groupCakes();
                 <a href="checkout.php?cakeID=<?= $card['cakeID'] ?>">
                     <div class="cursor-pointer group overflow-hidden relative text-pink-50
                     max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
-                        <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-400">
+                        <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-400/50">
                             <img src="<?= 'images/' . strtolower($type) . 's/' . htmlspecialchars($card['Image']) ?>"
                                 alt="<?= htmlspecialchars($card['Name']) ?>"
                                 class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-125">
                         </div>
-                        <div class="bg-pink-600 w-full p-3 text-center">
+                        <div class="bg-pink-600/50 w-full p-3 text-center">
                             <span class="text-pink-50 text-2xl font-semibold whitespace-normal break-words">
                                 <?= htmlspecialchars($card['Name']) ?>
                             </span>

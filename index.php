@@ -4,14 +4,14 @@ include_once 'includes/header.inc.php';
 
 <!-- Hero Section -->
 <div class="flex justify-center items-center m-10">
-    <div class="bg-pink-400 rounded p-10 max-w-2xl hover:scale-125 transition-all duration-500">
+    <div class="bg-pink-400/50 rounded p-10 max-w-2xl hover:scale-125 transition-all duration-500">
         <h2 class="text-5xl font-extrabold text-teal-50 text-center">Healthy Cake For You</h2>
     </div>
 </div>
 
 <!-- Featured Product -->
 <div class="flex justify-center items-center m-10">
-    <div class="flex flex-col items-center bg-pink-200 p-10 rounded max-w-3xl hover:scale-125 transition-all duration-500">
+    <div class="flex flex-col items-center bg-pink-200/50 p-10 rounded max-w-3xl hover:scale-125 transition-all duration-500">
         <h3 class="text-3xl text-pink-600 font-semibold text-center mb-6">Featured Product</h3>
         <img src="images/static/BlueberryCake.webp" alt="Blueberry Layer Cake" class="w-[300px] h-[200px] object-cover rounded-lg mb-4">
         <h4 class="text-2xl font-bold text-pink-700 mb-2">Blueberry Layer Cake</h4>
@@ -21,7 +21,7 @@ include_once 'includes/header.inc.php';
 
 <!-- Overview of products -->
 <div class="flex justify-center items-center">
-    <div class="bg-pink-400 rounded max-w-6xl">
+    <div class="bg-pink-400/50 rounded max-w-6xl">
         <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10">Our Specialties</h3>
         <div class="flex justify-center gap-10 p-10">
             <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
