@@ -7,11 +7,13 @@ $groupedCards = groupCakes();
 
 <div id="card-container">
     <?php foreach ($groupedCards as $type => $cards): ?>
-        <div class="flex items-center justify-center">
-            <h2 class="w-96 p-6 text-pink-50 bg-pink-600/50 hover:bg-pink-600 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
-                <?= htmlspecialchars($type) ?>
-            </h2>
-        </div>
+        <section id="<?= htmlspecialchars($type) ?>">
+            <div class="flex items-center justify-center">
+                <h2 class="w-96 p-6 text-pink-50 bg-pink-600/50 hover:bg-pink-600 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
+                    <?= htmlspecialchars($type) ?>
+                </h2>
+            </div>
+        </section>
 
         <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             <?php foreach ($cards as $card): ?>
