@@ -139,3 +139,25 @@ function loginUser($uname, $password)
         exit();
     }
 }
+
+function handleSignErrors()
+{
+    if (!isset($_GET['error'])) {
+        return;
+    }
+    $error = htmlspecialchars($_GET['error']);
+
+    if ($error == 'none') {
+        echo <<< DETAILS
+        <div class="text-sm mt-4 text-green-700">Account created successfully!<br><a href="signin.php"><span>Sign in</span></a></div>
+        DETAILS;
+    } elseif ($error == 'alreadysignedup') {
+        echo <<< DETAILS
+        <div class="text-sm mt-4 text-red-700">There is an account with this username<br><a href="signin.php"><span class="hover:opacity-50">Sign in?</span></a></div>
+        DETAILS;
+    } elseif ($error == 'invalidlogins') {
+        echo <<< DETAILS
+        <div class="text-sm mt-4 text-red-700">Invalid username or password<br><a href="signup.php"><span class="hover:opacity-50">Sign up?</span></a></div>
+        DETAILS;
+    }
+}

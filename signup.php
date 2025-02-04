@@ -1,12 +1,14 @@
 <?php
 $pageTitle = 'Sign Up | Rosemary';
-include_once 'includes/header.inc.php'
+include_once 'includes/header.inc.php';
+include_once 'includes/functions.inc.php';
 ?>
 
 <div style="background-image: url(images/static/colorful-ice-cream.webp); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;" class="h-[--dont-overflow] flex items-center justify-center bg-red-200 rounded-lg">
     <div class="main bg-pink-100 shadow-md p-10 transition-transform w-96 text-center rounded-lg">
         <h1 class="text-pink-600 text-3xl">Start<br>Your Delicious<br>Adventure<br>Here!</h1>
         <form action="signup_handler.php" method="POST">
+            <?php handleSignErrors(); ?>
             <div class="relative mb-6">
                 <label for="username" class="block mt-4 mb-2 text-left text-gray-700 font-bold">Username</label>
                 <input
