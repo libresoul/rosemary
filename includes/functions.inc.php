@@ -111,3 +111,31 @@ function addUser($uname, $email, $pw)
         return true;
     }
 }
+
+function loginUser($uname, $password)
+{
+    include_once 'db.inc.php';
+
+    $sql = 'SELECT * FROM users WHERE uname = :uname;';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':uname', $uname, SQLITE3_TEXT);
+
+    if (!$stmt) {
+        header('Location:../signin.php?error=stmtfailed');
+        exit();
+    }
+
+    $result = $stmt->execute();
+    $row = $result->fetchArray(SQLITE3_ASSOC);
+
+    if (($row != null)  && password_verify($password, $row['password']) === true) {
+        session_start();
+        $_SESSION['username'] = $row['uname'];
+        $_SESSION['email'] = $row['email'];
+        header('Location:../index.php');
+        exit();
+    } else {
+        header('Location:../signin.php?error=invalidlogins');
+        exit();
+    }
+}
