@@ -6,6 +6,10 @@ include_once 'includes/functions.inc.php';
 
 <div class="h-[--dont-overflow] flex items-center justify-center rounded">
     <div class="p-10 transition-transform w-xl text-center rounded">
+        <?php (isset($_GET['status'])) ? $status = htmlspecialchars($_GET['status']) : null ?>
+        <?php if (isset($status) && $status === 'ordersuccess'): ?>
+            <div class="text-md mb-4 text-green-700">Order placed successfully!</div>
+        <?php endif; ?>
         <h1 class="text-pink-600 text-5xl font-bold">Checkout</h1>
         <form action="payment_handler.php" method="post" class="m-10">
             <div>
