@@ -80,3 +80,34 @@ function isUnique($db, $uname, $email)
         exit();
     }
 }
+
+function addUser($uname, $email, $pw)
+{
+    include_once 'includes/db.inc.php';
+    $unique = isUnique($db, $uname, $email);
+
+    if (!$unique) {
+        header('Location:../signup.php?error=alreadysignedup');
+        exit();
+    }
+
+    $sql = 'INSERT INTO users(uname, email, password) VALUES(:uname, :email, :password);';
+    $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':uname', $uname, SQLITE3_TEXT);
+    $stmt->bindValue(':email', $email, SQLITE3_TEXT);
+    $stmt->bindValue(':password', $hashedPassword, SQLITE3_TEXT);
+
+    if (!$stmt) {
+        header('Location:../signup.php?error=stmtfailed');
+        exit();
+    }
+
+    $result = $stmt->execute();
+
+    if (!$result) {
+        return false;
+    } else {
+        return true;
+    }
+}
