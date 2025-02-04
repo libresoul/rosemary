@@ -62,13 +62,13 @@ session_start();
             <a href="signin.php" class="hover:bg-pink-200 px-4 py-2 rounded transition">Sign In</a>
         </div>
     </nav> -->
-    <nav class="sticky h-20 bg-pink-700 w-full z-40 text-pink-50">
+    <nav class="sticky h-20 bg-pink-600 w-full z-40 text-pink-50">
         <div class="max-w-screen-xl items-center justify-center flex gap-10 p-4 rounded min-w-full">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="images/static/logo.PNG" class="h-12" alt="Logo">
-                <span class="text-3xl font-semibold whitespace-nowrap">Rosemary</span>
+                <!--<img src="images/static/logo.PNG" class="h-12" alt="Logo">-->
+                <span class="text-3xl font-semibold whitespace-nowrap hover:scale-125 transition-all duration-500">Rosemary</span>
             </a>
-            <button id="menu-toggle" class="text-pink-200 md:hidden focus:outline-none">
+            <button id="menu-toggle" class="text-pink-200 md:hidden focus:outline-none hover:scale-125 transition-all duration-500">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
@@ -92,20 +92,26 @@ session_start();
     </nav>
 
     <!-- Mobile Side Menu -->
-    <div id="mobile-menu" class="fixed z-10 top-0 left-0 h-full w-64 bg-pink-700 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden">
-        <button id="close-menu" class="absolute top-4 right-4 text-teal-500">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-        <ul class="mt-16 space-y-4 p-6 text-xl font-medium">
-            <li><a href="/" class="block text-xl md:hover:bg-transparent md:hover:scale-125 transition-all duration-500">Home</a></li>
-            <li><a href="shopping.php" class="block text-xl md:hover:bg-transparent md:hover:scale-125 transition-all duration-500">Browse</a></li>
-            <li><a href="about.php" class="block text-xl md:hover:bg-transparent md:hover:scale-125 transition-all duration-500">About</a></li>
-            <li><a href="contact.php" class="block text-xl md:hover:bg-transparent md:hover:scale-125 transition-all duration-500">Contact</a></li>
-        </ul>
-        <?php if (isset($_SESSION['username'])): ?>
-        <?php else: ?>
-            <a href="signup.php"><button type="button" class="text-pink-700 bg-pink-200 hover:scale-125 transition-all duration-500 focus:ring-4 focus:outline-none font-medium rounded-lg px-4 py-2 text-center text-xl">Start Your Journey !</button></a>
+<div id="mobile-menu" class="fixed z-10 top-0 left-0 h-96 w-full bg-pink-600 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-center items-center">
+    <button id="close-menu" class="absolute top-4 right-4 text-pink-100">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+    <ul class="mt-16 space-y-4 p-6 text-xl font-medium flex flex-col items-center text-pink-100">
+        <li><a href="/" class="block text-xl md:hover:bg-transparent hover:scale-125 transition-all duration-500">Home</a></li>
+        <li><a href="shopping.php" class="block text-xl hover:scale-125 transition-all duration-500">Browse</a></li>
+        <li><a href="about.php" class="block text-xl hover:scale-125 transition-all duration-500">About</a></li>
+        <li><a href="contact.php" class="block text-xl hover:scale-125 transition-all duration-500">Contact</a></li>
+        
+        <?php if (!isset($_SESSION['username'])): ?>
+            <div class="mt-6">
+                <a href="signup.php">
+                    <button type="button" class="text-pink-700 bg-pink-200 hover:scale-125 transition-all duration-500 font-medium rounded-lg text-center text-xl p-2">
+                        Start Your Journey
+                    </button>
+                </a>
+            </div>
         <?php endif ?>
-    </div>
+    </ul>
+</div>

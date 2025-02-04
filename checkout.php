@@ -4,7 +4,7 @@ include_once 'includes/header.inc.php';
 include_once 'includes/functions.inc.php';
 ?>
 
-<div class="h-[--dont-overflow] flex items-center justify-center bg-pink-200 rounded">
+<div class="h-[--dont-overflow] flex items-center justify-center rounded">
     <div class="p-10 transition-transform w-xl text-center rounded">
         <h1 class="text-pink-600 text-5xl font-bold">Checkout</h1>
         <form action="payment_handler.php" method="post" class="m-10">
