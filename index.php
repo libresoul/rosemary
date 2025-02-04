@@ -25,10 +25,10 @@ include_once 'includes/header.inc.php';
         <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10">Our Specialties</h3>
         <div class="flex justify-center gap-10 p-10">
             <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
-                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200">
+                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                     <img src="images/static/Cupcakes.jpg" alt="Cupcake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
                 </div>
-                <div class="bg-pink-600 w-full p-3 text-center">
+                <div class="bg-pink-600/50 w-full p-3 text-center">
                     <span class="text-pink-100 text-2xl font-semibold">Cupcake</span>
                 </div>
                 <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -36,10 +36,10 @@ include_once 'includes/header.inc.php';
                 </div>
             </div>
             <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
-                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200">
+                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                     <img src="images/static/Cake.webp" alt="Cake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
                 </div>
-                <div class="bg-pink-600 w-full p-3 text-center">
+                <div class="bg-pink-600/50 w-full p-3 text-center">
                     <span class="text-pink-100 text-2xl font-semibold">Cake</span>
                 </div>
                 <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -47,10 +47,10 @@ include_once 'includes/header.inc.php';
                 </div>
             </div>
             <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
-                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200">
+                <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
                     <img src="images/static/donut.webp" alt="Donut" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
                 </div>
-                <div class="bg-pink-600 w-full p-3 text-center">
+                <div class="bg-pink-600/50 w-full p-3 text-center">
                     <span class="text-pink-100 text-2xl font-semibold">Donut</span>
                 </div>
                 <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
