@@ -1,25 +1,22 @@
 <?php
-$hostname = 'localhost';
-$username = 'sanadee';
-$password = '1234';
-$db_name = 'payment';
+include_once 'includes/functions.inc.php';
 
-$connection = mysqli_connect($hostname, $username, $password, $db_name);
-
-if($connection) {
-    echo "Connected Successfully";
-}
-else {
-    echo "Connection Failed";
+if (!isset($_POST['submit'])) {
+    header('Location:checkout.php');
+    exit();
 }
 
-$name = $_POST["name"];
-$address = $_POST["address"];
-$number = $_POST["contact_number"];
-$price = $_POST["price"];
+$name = htmlspecialchars($_POST["name"]);
+$address = htmlspecialchars($_POST["address"]);
+$number = htmlspecialchars($_POST["contact_number"]);
+$id = htmlspecialchars($_GET['cakeID']);
 
-$query = "insert into payment_details (name, address, contact_number, price) values ('$name', '$address', '$number', '$price')";
+$response = addOrder($name, $address, $number, $id);
 
-mysqli_query($connection, $query);
-
-?>
+if ($response) {
+    header('checkout.php?status=ordersuccess');
+    exit();
+} else {
+    header('shopping.php?error=orderfailed');
+    exit();
+}
