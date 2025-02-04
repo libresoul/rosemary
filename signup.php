@@ -17,7 +17,7 @@ include_once 'includes/functions.inc.php';
                     name="username"
                     minlength="4"
                     maxlength="20"
-                    placeholder="Enter your Username"
+                    placeholder="Create a username"
                     class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
                 <button type="button" id="genbtn" class="absolute right-0 top-10 bottom-0 h-fit text-gray-400 rounded-md hover:opacity-50"><i class="fa-solid fa-arrows-rotate"></i></button>
@@ -28,7 +28,7 @@ include_once 'includes/functions.inc.php';
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your Email"
+                    placeholder="Enter a valid email"
                     class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
             </div>
@@ -40,7 +40,7 @@ include_once 'includes/functions.inc.php';
                     name="password"
                     minlength="4"
                     maxlength="15"
-                    placeholder="Enter your Password"
+                    placeholder="Create a password"
                     class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
             </div>

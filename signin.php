@@ -16,7 +16,7 @@ include_once 'includes/functions.inc.php';
                     name="username"
                     minlength="4"
                     maxlength="20"
-                    placeholder="Enter your Username"
+                    placeholder="Enter your username"
                     class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
                     required>
             </div>
@@ -26,7 +26,7 @@ include_once 'includes/functions.inc.php';
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="Enter your Password"
+                    placeholder="Enter your password"
                     minlength="4"
                     maxlength="15"
                     class="p-2 text-sm text-pink-600 bg-pink-100 border border-pink-400 rounded text-center w-64"
