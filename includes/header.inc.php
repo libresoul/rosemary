@@ -49,7 +49,7 @@ session_start();
     </script>
 </head>
 
-<body class="font-['Comfortaa'] bg-[url(images/static/pawel-czerwinski-2PN18U8CKi0-unsplash.jpg)]">
+<body class="font-['Comfortaa'] bg-[url(images/static/background.webp)]">
     <!-- <nav
         class="sticky h-12  top-0 my-4 text-lg text-pink-600 flex content-center justify-between gap-6 bg-white border-pink-100 shadow-lg py-3 rounded-lg">
         <div class="xl:ml-64 lg:ml-32 md:ml-20">
