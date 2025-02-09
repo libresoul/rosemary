@@ -14,12 +14,11 @@ $groupedCards = groupCakes();
                 </h2>
             </div>
         </section>
-
-        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div class="max-w-6xl grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 place-items-center mx-auto bg-pink-200/40">
             <?php foreach ($cards as $card): ?>
                 <a href="checkout.php?cakeID=<?= $card['cakeID'] ?>">
                     <div class="cursor-pointer group overflow-hidden relative text-pink-50
-                    max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
+                        max-w-[300px] sm:m-6 md:m-10 transition-all duration-500 hover:scale-125 hover:z-10 rounded">
                         <div class="flex items-center justify-center w-full bg-pink-400/50">
                             <img src="<?= 'images/' . strtolower($type) . 's/' . htmlspecialchars($card['Image']) ?>"
                                 alt="<?= htmlspecialchars($card['Name']) ?>"
@@ -31,13 +30,12 @@ $groupedCards = groupCakes();
                             </span>
                         </div>
                         <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-50 text-1xl opacity-0
-                        transition-opacity duration-500 group-hover:opacity-100">
+                            transition-opacity duration-500 group-hover:opacity-100">
                             <?= htmlspecialchars($card['Description']) ?>
                         </div>
                     </div>
                 </a>
             <?php endforeach; ?>
         </div>
-
     <?php endforeach; ?>
 </div>
