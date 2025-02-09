@@ -21,8 +21,8 @@ include_once 'includes/header.inc.php';
 
 <!-- Overview of products -->
 <div class="flex justify-center items-center">
-    <div class="bg-pink-400/50 rounded max-w-6xl">
-        <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10 m-10">Our Specialties</h3>
+    <div class="bg-pink-400/50 rounded max-w-6xl pb-6">
+        <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10 mx-12">Our Specialties</h3>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10">
             <?php
             $products = array(
