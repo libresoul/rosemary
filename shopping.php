@@ -5,7 +5,7 @@ include_once 'includes/functions.inc.php';
 $groupedCards = groupCakes();
 ?>
 
-<div id="card-container">
+<div id="card-container" class="mb-10">
     <?php foreach ($groupedCards as $type => $cards): ?>
         <section id="<?= htmlspecialchars($type) ?>">
             <div class="flex items-center justify-center">
@@ -20,10 +20,10 @@ $groupedCards = groupCakes();
                 <a href="checkout.php?cakeID=<?= $card['cakeID'] ?>">
                     <div class="cursor-pointer group overflow-hidden relative text-pink-50
                     max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-125 hover:z-10 rounded">
-                        <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-400/50">
+                        <div class="flex items-center justify-center w-full bg-pink-400/50">
                             <img src="<?= 'images/' . strtolower($type) . 's/' . htmlspecialchars($card['Image']) ?>"
                                 alt="<?= htmlspecialchars($card['Name']) ?>"
-                                class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-125">
+                                class="object-cover transition-transform duration-500 aspect-[4/3] group-hover:scale-125">
                         </div>
                         <div class="bg-pink-600/50 w-full p-3 text-center">
                             <span class="text-pink-50 text-2xl font-semibold whitespace-normal break-words">
