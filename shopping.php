@@ -10,7 +10,7 @@ $groupedCards = groupCakes();
         <section id="<?= htmlspecialchars($type) ?>">
             <div class="flex items-center justify-center">
                 <h2 class="w-96 p-6 text-pink-50 bg-pink-600/50 hover:bg-pink-600 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
-                    <?= htmlspecialchars($type) ?>
+                    <?= htmlspecialchars($type) . "s" ?>
                 </h2>
             </div>
         </section>

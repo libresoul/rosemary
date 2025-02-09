@@ -24,63 +24,52 @@ include_once 'includes/header.inc.php';
     <div class="bg-pink-400/50 rounded max-w-6xl">
         <h3 class="text-5xl text-pink-50 font-semibold text-center pt-10 m-10">Our Specialties</h3>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10">
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
-                <a href="shopping.php#Cupcake">
-                    <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
-                        <img src="images/static/Cupcakes.jpg" alt="Cupcake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
+            <?php
+            $products = array(
+                "Cupcake" => "Fluffy and delicious, baked with love.",
+                "Cake" => "Perfect for celebrations, fresh and moist.",
+                "Donut" => "Sweat treats with a variety of toppings."
+            );
+            foreach ($products as $product => $description) {
+            ?>
+                <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
+                    <a href="shopping.php#<?= $product ?>">
+                        <div class="flex items-center justify-center w-full bg-pink-200/50">
+                            <img src="images/static/products/<?= $product ?>.webp" alt="<?= $product ?>" class="object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    </a>
+                    <div class="bg-pink-600/50 w-full p-3 text-center">
+                        <span class="text-pink-100 text-2xl font-semibold"><?= $product ?></span>
                     </div>
-                </a>
-                <div class="bg-pink-600/50 w-full p-3 text-center">
-                    <span class="text-pink-100 text-2xl font-semibold">Cupcake</span>
-                </div>
-                <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    Fluffy and delicious, baked with love.
-                </div>
-            </div>
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
-                <a href="shopping.php#Cake">
-                    <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
-                        <img src="images/static/Cake.webp" alt="Cake" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        <?= $description ?>
                     </div>
-                </a>
-                <div class="bg-pink-600/50 w-full p-3 text-center">
-                    <span class="text-pink-100 text-2xl font-semibold">Cake</span>
                 </div>
-                <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    Perfect for celebrations, fresh and moist.
-                </div>
-            </div>
-            <div class="cursor-pointer group overflow-hidden relative text-pink-100 max-w-[300px] min-w-[250px] mx-auto transition-all duration-500 hover:scale-105 hover:z-10 rounded">
-                <a href="shopping.php#Donut">
-                    <div class="flex items-center justify-center w-full aspect-[4/3] p-4 bg-pink-200/50">
-                        <img src="images/static/donut.webp" alt="Donut" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105">
-                    </div>
-                </a>
-                <div class="bg-pink-600/50 w-full p-3 text-center">
-                    <span class="text-pink-100 text-2xl font-semibold">Donut</span>
-                </div>
-                <div class="absolute bg-pink-600 bottom-0 w-full p-4 text-center text-pink-100 text-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    Sweet treats with a variety of toppings.
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>
 
-<!-- The footer... maybe -->
+<!-- Website Features Section -->
 <div class="flex flex-row justify-center gap-10 m-10">
-    <div class="text-center transition-all duration-500 hover:scale-125">
-        <img class="h-20 w-20 mx-auto mb-2" src="secure.png" alt="Safe Payment">
-        <h4 class="font-semibold text-xl">Safe Payment</h4>
-    </div>
-    <div class="text-center transition-all duration-500 hover:scale-125">
-        <img class="h-20 w-20 mx-auto mb-2" src="flavor.png" alt="Authentic Flavors">
-        <h4 class="font-semibold text-xl">100% Authentic Flavors</h4>
-    </div>
-    <div class="text-center transition-all duration-500 hover:scale-125">
-        <img class="h-20 w-20 mx-auto mb-2" src="quality.png" alt="Quality Guaranteed">
-        <h4 class="font-semibold text-xl">Shop with Confidence</h4>
-    </div>
+    <?php
+    $features = array(
+        "Safe Payment" => "secure.webp",
+        "100% Authentic Flavors" => "flavor.webp",
+        "Shop with Confidence" => "quality.webp"
+    );
+
+    foreach ($features as $feature => $image) {
+    ?>
+        <div class="text-center transition-all duration-500 hover:scale-125">
+            <img class="h-20 w-20 mx-auto mb-2" src="images/static/features/<?= $image ?>" alt="<?= $feature ?>">
+            <h4 class="font-semibold text-xl"><?= $feature ?></h4>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 </body>
