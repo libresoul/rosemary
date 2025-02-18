@@ -3,7 +3,7 @@ $pageTitle = 'Sign In | Rosemary';
 include_once 'includes/header.inc.php';
 include_once 'includes/functions.inc.php';
 ?>
-<div class="h-[--dont-overflow] flex items-center justify-center rounded">
+<div class="h-[--dont-overflow] md:mt-20 flex items-center justify-center rounded">
     <div class="p-10 transition-transform w-xl text-center rounded">
         <h1 class="text-pink-600 text-5xl font-bold">Pick Up<br>Where You<br>Left Off!</h1>
         <form action="signin_handler.php" method="POST" class="m-10">
