@@ -4,7 +4,7 @@ include_once 'includes/header.inc.php';
 include_once 'includes/functions.inc.php';
 ?>
 
-<div class="h-[--dont-overflow] flex items-center justify-center rounded">
+<div class="h-[--dont-overflow] md:mt-20 flex items-center justify-center rounded">
     <div class="p-10 transition-transform w-xl text-center rounded">
         <?php (isset($_GET['status'])) ? $status = htmlspecialchars($_GET['status']) : null ?>
         <?php if (isset($status) && $status === 'ordersuccess'): ?>
