@@ -11,10 +11,10 @@ $groupedCards = groupCakes();
             <div class="flex items-center justify-center">
                 <h2 class="w-96 p-6 text-pink-50 bg-pink-600/50 hover:bg-pink-600 hover:scale-125 transition-all duration-500 text-center text-5xl font-bold uppercase m-10 rounded">
                     <?= htmlspecialchars($type) . "s" ?>
-                </h2>
+                </h2
             </div>
         </section>
-        <div class="max-w-6xl grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 place-items-center mx-auto bg-pink-200/40">
+        <div class="max-w-6xl grid sm:grid-cols-2 md:gap-0 gap-10 sm:gap-0 md:grid-cols-3 lg:grid-cols-3 place-items-center mx-auto bg-pink-200/40">
             <?php foreach ($cards as $card): ?>
                 <a href="checkout.php?cakeID=<?= $card['cakeID'] ?>">
                     <div class="cursor-pointer group overflow-hidden relative text-pink-50

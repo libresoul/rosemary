@@ -2,7 +2,7 @@
 $pageTitle = 'Contact Us | Rosemary';
 include_once 'includes/header.inc.php'
 ?>
-<div class="h-[--dont-overflow] flex items-center justify-center p-4 border border-pink-300 rounded-lg shadow">
+<div class="h-[--dont-overflow] flex items-center justify-center p-4">
     <div class="w-[400px] text-center p-[30px] rounded-xl">
         <h1 class="my-10 text-5xl font-bold text-pink-600">Contact us</h1>
         <form class="flex flex-col gap-4">
